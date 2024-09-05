@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de ciberseguridad</title>
+    <style>
+        body {
+            background-color: white;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding-top: 80px; /* Evita que el contenido se superponga con el header fijo */
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background-color: rgb(243, 243, 17);
+            padding: 10px 20px;
+            box-shadow: 0 4px 2px -2px gray;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        #content {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+        h1 {
+            margin: 20px 0 10px 0; /* Añade margen superior para separación */
+            padding-right: 20px;
+            font-size: 24px;
+        }
+        .div {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-grow: 1;
+        }
+        .div li {
+            background-color: lightblue;
+            text-decoration: none;
+            margin: 0;
+        }
+        .div a {
+            text-decoration: none;
+            color: black;
+            transition: background-color 0.3s;
+            padding: 10px 15px;
+            display: block;
+        }
+        .div a:hover {
+            background-color: blue;
+            color: white;
+        }
+        label {
+            display: block;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="content">
+            <h1>Guía de ciberseguridad</h1>
+            <ul class="div">
+                <li onclick="Inicio()"><a href="#">Inicio</a></li>
+                <li onclick="Nmap()"><a href="#">Nmap</a></li>
+                <li onclick="Ping()"><a href="#">Ping</a></li>
+                <li onclick="Vulnerabilidades()"><a href="#">Vulnerabilidades</a></li>
+                <li onclick="Entrar_al_router()"><a href="#">Entrar al router</a></li>
+            </ul>
+        </div>
+    </header>
+    <label id="label_inicio">Hola, bienvenido a este sitio web en el que podrás aprender ciberseguridad y protegerte contra ataques cibernéticos.</label>
+    <h1 id="h1map">Nmap</h1>
+    <label id="labelmap">Nmap es una herramienta de ciberseguridad que se utiliza a menudo para auditorías en redes locales de empresas o para hacer escaneos sin permiso para fines no éticos(ilegal).</label>
+    <label id="label2map">Para instalar esta herramienta, usted debe ir a la página oficial de nmap(nmap.org) o instalar desde sitios de terceros(tenga cuidado con los sitios de terceros).</label>
+    <label id="label3map">Nmap tiene varios usos desde la interfaz gráfica o del cmd/terminal: Escanear Vulnerabilidades: nmap --script vuln ip_o_url_de_la_máquina, Escaneo normal: nmap ip_o_url_de_la_máquina, etc...</label>
+    
+    <h1 id="h1ping">Ping</h1>
+    <label id="labelping">Ping es un comando/herramienta predeterminado en los sistemas operativos: Windows, Linux, Kali Linux, Mac os etc...</label>
+    <label id="label2ping">Se utiliza para ver si un host está encendido o con un internet estable.</label>
+    <label id="label3ping">Su uso desde el cmd/terminal es: ping ip_o_url_de_la_máquina, o también los hackers pueden usar esta herramienta en linux para hacer ataques Dos(ataques de denegación de servicio): ping -s 406 -i 0.01 ip_o_url_de_la_máquina.</label>
+
+    <h1 id="h1vuln">Vulnerabilidades</h1>
+    <label id="labelvuln">Las Vulnerabilidades son fallos de seguridad en hosts.</label>
+    <label id="label2vuln">Y esas Vulnerabilidades hacen que a los hackers se les facilite hackear el host.</label>
+    <label id="label3vuln">Y eso se puede prevenir o evitar con el mismo Nmap, y consultar documentación profesional o intentar solucionarlo por tu cuenta.</label>
+
+    <h1 id="h1enter">Entrar al router</h1>
+    <label id="labelenter">Entrar a la configuración de un router es muy fácil, se hace desde el navegador.</label>
+    <label id="label2enter">En el navegador se va a poner la puerta de enlace predeterminada de tu router, suele ser 192.168.1.1 o 192.168.0.1, lo puedes hacer desde Windows con el comando ipconfig y en Linux ifconfig.</label>
+    <label id="label3enter">Y te pondrá que introduzcas las credenciales del router, nombre de usuario y contraseña, a veces solo contraseña, suele ser las credenciales user y user o admin y admin, a veces las credenciales están en la pegatina del router.</label>
+    <label id="label4enter">Una vez las credenciales puestas, ya podrás controlar el router entero, como su firewall, hosts conectado a la red, control de los hosts etc...</label>
+
+    <script>
+        function Inicio() {
+            document.getElementById("label_inicio").style.display = "block";
+            document.getElementById("h1map").style.display = "none";
+            document.getElementById("labelmap").style.display = "none";
+            document.getElementById("label2map").style.display = "none";
+            document.getElementById("label3map").style.display = "none";
+            document.getElementById("h1ping").style.display = "none";
+            document.getElementById("labelping").style.display = "none";
+            document.getElementById("label2ping").style.display = "none";
+            document.getElementById("label3ping").style.display = "none";
+            document.getElementById("h1vuln").style.display = "none";
+            document.getElementById("labelvuln").style.display = "none";
+            document.getElementById("label2vuln").style.display = "none";
+            document.getElementById("label3vuln").style.display = "none";
+            document.getElementById("h1enter").style.display = "none";
+            document.getElementById("labelenter").style.display = "none";
+            document.getElementById("label2enter").style.display = "none";
+            document.getElementById("label3enter").style.display = "none";
+            document.getElementById("label4enter").style.display = "none";
+        }
+        function Nmap() {
+            document.getElementById("label_inicio").style.display = "none";
+            document.getElementById("h1map").style.display = "block";
+            document.getElementById("labelmap").style.display = "block";
+            document.getElementById("label2map").style.display = "block";
+            document.getElementById("label3map").style.display = "block";
+            document.getElementById("h1ping").style.display = "none";
+            document.getElementById("labelping").style.display = "none";
+            document.getElementById("label2ping").style.display = "none";
+            document.getElementById("label3ping").style.display = "none";
+            document.getElementById("h1vuln").style.display = "none";
+            document.getElementById("labelvuln").style.display = "none";
+            document.getElementById("label2vuln").style.display = "none";
+            document.getElementById("label3vuln").style.display = "none";
+            document.getElementById("h1enter").style.display = "none";
+            document.getElementById("labelenter").style.display = "none";
+            document.getElementById("label2enter").style.display = "none";
+            document.getElementById("label3enter").style.display = "none";
+            document.getElementById("label4enter").style.display = "none";
+        }
+        function Ping() {
+            document.getElementById("label_inicio").style.display = "none";
+            document.getElementById("h1map").style.display = "none";
+            document.getElementById("labelmap").style.display = "none";
+            document.getElementById("label2map").style.display = "none";
+            document.getElementById("label3map").style.display = "none";
+            document.getElementById("h1ping").style.display = "block";
+            document.getElementById("labelping").style.display = "block";
+            document.getElementById("label2ping").style.display = "block";
+            document.getElementById("label3ping").style.display = "block";
+            document.getElementById("h1vuln").style.display = "none";
+            document.getElementById("labelvuln").style.display = "none";
+            document.getElementById("label2vuln").style.display = "none";
+            document.getElementById("label3vuln").style.display = "none";
+            document.getElementById("h1enter").style.display = "none";
+            document.getElementById("labelenter").style.display = "none";
+            document.getElementById("label2enter").style.display = "none";
+            document.getElementById("label3enter").style.display = "none";
+            document.getElementById("label4enter").style.display = "none";
+        }
+        function Vulnerabilidades() {
+            document.getElementById("label_inicio").style.display = "none";
+            document.getElementById("h1map").style.display = "none";
+            document.getElementById("labelmap").style.display = "none";
+            document.getElementById("label2map").style.display = "none";
+            document.getElementById("label3map").style.display = "none";
+            document.getElementById("h1ping").style.display = "none";
+            document.getElementById("labelping").style.display = "none";
+            document.getElementById("label2ping").style.display = "none";
+            document.getElementById("label3ping").style.display = "none";
+            document.getElementById("h1vuln").style.display = "block";
+            document.getElementById("labelvuln").style.display = "block";
+            document.getElementById("label2vuln").style.display = "block";
+            document.getElementById("label3vuln").style.display = "block";
+            document.getElementById("h1enter").style.display = "none";
+            document.getElementById("labelenter").style.display = "none";
+            document.getElementById("label2enter").style.display = "none";
+            document.getElementById("label3enter").style.display = "none";
+            document.getElementById("label4enter").style.display = "none";
+        }
+        function Entrar_al_router() {
+            document.getElementById("label_inicio").style.display = "none";
+            document.getElementById("h1map").style.display = "none";
+            document.getElementById("labelmap").style.display = "none";
+            document.getElementById("label2map").style.display = "none";
+            document.getElementById("label3map").style.display = "none";
+            document.getElementById("h1ping").style.display = "none";
+            document.getElementById("labelping").style.display = "none";
+            document.getElementById("label2ping").style.display = "none";
+            document.getElementById("label3ping").style.display = "none";
+            document.getElementById("h1vuln").style.display = "none";
+            document.getElementById("labelvuln").style.display = "none";
+            document.getElementById("label2vuln").style.display = "none";
+            document.getElementById("label3vuln").style.display = "none";
+            document.getElementById("h1enter").style.display = "block";
+            document.getElementById("labelenter").style.display = "block";
+            document.getElementById("label2enter").style.display = "block";
+            document.getElementById("label3enter").style.display = "block";
+            document.getElementById("label4enter").style.display = "block";
+        }
+        Inicio();
+    </script>
+</body>
+</html>
